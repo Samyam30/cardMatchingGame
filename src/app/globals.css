@@ -1,33 +1,320 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
+  @tailwind components;
+  @tailwind utilities;
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 222.2 84% 4.9%;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+      --card: 0 0% 100%;
+      --card-foreground: 222.2 84% 4.9%;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+      --popover: 0 0% 100%;
+      --popover-foreground: 222.2 84% 4.9%;
+
+      --primary: 222.2 47.4% 11.2%;
+      --primary-foreground: 210 40% 98%;
+
+      --secondary: 210 40% 96.1%;
+      --secondary-foreground: 222.2 47.4% 11.2%;
+
+      --muted: 210 40% 96.1%;
+      --muted-foreground: 215.4 16.3% 46.9%;
+
+      --accent: 210 40% 96.1%;
+      --accent-foreground: 222.2 47.4% 11.2%;
+
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 210 40% 98%;
+
+      --border: 214.3 31.8% 91.4%;
+      --input: 214.3 31.8% 91.4%;
+      --ring: 222.2 84% 4.9%;
+
+      --radius: 0.5rem;
+    }
+
+    .dark {
+      --background: 222.2 84% 4.9%;
+      --foreground: 210 40% 98%;
+
+      --card: 222.2 84% 4.9%;
+      --card-foreground: 210 40% 98%;
+
+      --popover: 222.2 84% 4.9%;
+      --popover-foreground: 210 40% 98%;
+
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 11.2%;
+
+      --secondary: 217.2 32.6% 17.5%;
+      --secondary-foreground: 210 40% 98%;
+
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 215 20.2% 65.1%;
+
+      --accent: 217.2 32.6% 17.5%;
+      --accent-foreground: 210 40% 98%;
+
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+
+      --border: 217.2 32.6% 17.5%;
+      --input: 217.2 32.6% 17.5%;
+      --ring: 212.7 26.8% 83.9%;
+    }
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
   }
+  body{
+    color: #fab570e3;
+    background-color: #251e16
+  }
+  .container {
+    margin-left: -12px;
+    color: white;
+    position: relative;
+    font-family: sans-serif;
+    width: 210px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+  }
+  
+
+
+  .title{
+    color: #556b2f;
+  }
+
+  .inttt{
+    height: 140px;
+    width: 100%;
+    position: fixed;
+    background-color: #0c0908ec;
+    box-shadow:inset 0px 2px 20px 5px #ffbb763f;
+  }
+  .inttt:hover{
+    box-shadow:inset 0px 2px 20px 5px #556b2f;
+  }
+/* fab57041 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .container1 {
+    margin-left: -12px;
+    color: white;
+    position: relative;
+    font-family: sans-serif;
+    width: auto;
+  }
+
+  .container1::before,
+  .container1::after,.container2::after,.container2::before {
+    content: "";
+    background-color: #556b2f;
+    position: absolute;
+  }
+  
+  .container1::before {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    top: 10%;
+    right: 40%;
+  }
+  .container2::before {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    top: 10%;
+    right: 20%;
+  }
+
+  .container1::after,.container2::after {
+    content: "";
+    position: absolute;
+    height: 3rem;
+    top: 8%;
+    right: 5%;
+    
+  }
+  
+  .container1 .box1 {
+    width: auto;
+    height: auto;
+    min-height: 140px;
+    min-width: 100%;
+    padding: 1rem;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.074);
+    /* border: 1px solid rgba(255, 255, 255, 0.222); */
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 0.7rem;
+    transition: all ease 0.3s;
+  }
+
+  .container1 .box1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+  }
+  
+  .container1 .box1 {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+  
+  .container1 .box1 {
+    display: block;
+    margin-bottom:40px;
+  }
+  
+  .container1 .box1 {
+    font-size: 0.9em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    box-shadow: inset 0px 0px 20px 1px #ffbb763f;
+  }
+
+  
+  .container1:hover .box1:hover {
+    box-shadow: inset 0px 0px 20px 1px #556b2f;
+    /* border: 1px solid rgba(255, 255, 255, 0.454); */
+  }
+  #card1,#card2{
+    border: none;
+  }
+
+  #card1:hover{
+    box-shadow:  0px 0px 100px 5px #556b2f;
+  }
+  #card2:hover{
+    box-shadow:  0px 0px 100px 5px #ffbb763f;
+  }
+  #cont2::before {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    top: 18%;
+    right: 10%;
+  }
+  #cont3::before {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    top: 40%;
+    right: 18%;
+  }
+  #cont4::before {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    top: 5%;
+    right: 27%;
+  }
+  #cont5::before {
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    top: 2%;
+    left: 36%;
+  }
+  #cont6::before {
+    border-radius: 50%;
+    width: 14rem;
+    height: 14rem;
+    top: -70%;
+    left: -5%;
+  }
+  #cont7::before {
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    top: -80%;
+    left: 18%;
+  }
+  #cont8::before {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    top: 20%;
+    right: 3%;
+  }
+
+
+
+
+
+
+
+  /* cardpop.css */
+
+.card-container {
+  perspective: 1000px;
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+
+
 }
+
+
+.card-container.matched {
+  visibility: hidden;
+}
+
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front {
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-container.flipped .card-front {
+  transform: rotateY(-180deg);
+}
+
+.card-container.flipped .card-back {
+  transform: rotateY(0deg);
+}
+
+
+
+
+
+
+
+
